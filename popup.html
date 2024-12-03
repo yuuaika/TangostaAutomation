@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            width: 320px;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: #fff;
+        }
+
+        .header {
+            background: #f8f8f8;
+            padding: 16px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 500;
+            color: #333;
+            margin: 0;
+        }
+
+        .main-content {
+            padding: 16px;
+        }
+
+        .section {
+            background: #f8f8f8;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+
+        .api-input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            width: calc(100% - 26px);
+            margin-bottom: 8px;
+        }
+
+        .save-button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .button-container {
+            margin-top: 16px;
+        }
+        
+        .start-button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .start-button:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .status {
+            margin-top: 12px;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .status.success {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .status.error {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .stats-section {
+            background: #f0f7ff;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        .stats-text {
+            color: #444;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .stats-number {
+            color: #0066cc;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">Tangosta Helper</h1>
+    </div>
+
+    <div class="main-content">
+        <div class="section">
+            <input type="password" id="apiKey" class="api-input" placeholder="Enter your OpenAI API key (sk-...)">
+            <button id="saveButton" class="save-button">Save API Key</button>
+        </div>
+        <div class="button-container">
+            <button id="startButton" class="start-button" disabled>Start Answering</button>
+        </div>
+        <div id="status" class="status"></div>
+        <div class="stats-section">
+            <p class="stats-text">
+                TangostaAutomation has answered <span id="questionCount" class="stats-number">0</span> questions for you!
+            </p>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
