@@ -4,18 +4,15 @@ A Chrome extension that automates quiz answering on Tangosta using OpenAI's GPT-
 
 ## Installation
 
-1. Clone this repository or download the ZIP file:
-```bash
-git clone https://github.com/YourUsername/tangosta-quiz-automator.git
-```
+1. Download the ZIP file:
 
 2. Open Chrome and navigate to `chrome://extensions/`
 
 3. Enable "Developer mode" in the top right corner
 
-4. Click "Load unpacked" and select the extension directory
-
-   ## Setup
+4. Click "Load unpacked" and select the unpacked folder
+   
+## Setup
 
 1. Get your OpenAI API key:
    - Go to [OpenAI's website](https://platform.openai.com/)
@@ -50,7 +47,7 @@ git clone https://github.com/YourUsername/tangosta-quiz-automator.git
 - API usage will incur charges based on OpenAI's pricing
 - Use responsibly and in accordance with Tangosta's terms of service
 
-- ## Important Legal Disclaimer
+## Important Legal Disclaimer
 
 This Chrome extension is created **SOLELY FOR EDUCATIONAL PURPOSES** to demonstrate JavaScript programming, Chrome Extension development, and API integration. By using this software:
 
